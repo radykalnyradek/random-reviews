@@ -34,15 +34,25 @@ const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
 const randomBtn = document.querySelector(".random-btn");
 
-let id = 1;
+let id = 0;
+
+window.addEventListener("DOMContentLoaded", () => {
+  changeContent();
+});
 
 nextBtn.addEventListener("click", () => {
   id++;
+  if (id > reviews.length) {
+    id = 0;
+  }
   changeContent();
 });
 
 prevBtn.addEventListener("click", () => {
   id--;
+  if (id < 0) {
+    id = reviews.length;
+  }
   changeContent();
 });
 
