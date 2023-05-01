@@ -58,7 +58,6 @@ prevBtn.addEventListener("click", () => {
 
 randomBtn.addEventListener("click", () => {
   id = Math.floor(Math.random() * reviews.length);
-  console.log(id);
   changeContent();
 });
 
